@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Para ti mi amor ❤️</title>
+    <link rel="icon" type="image/x-icon" href="Love_files/icon.png">
+    <meta name="language" content="es-ES">
+    <meta name="title" content="title">
+    <link type="text/css" rel="stylesheet" href="./Love_files/default.css">
+    <script type="text/javascript" src="./Love_files/jquery.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-parser.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-jit.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-builderbase.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-async.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-async-powerpack.min.js"></script>
+    <script type="text/javascript" src="./Love_files/functions.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./Love_files/love.js" charset="utf-8"></script>
+</head>
 
+<body>
+    <div id="main">
+        <div id="error">
+            Tu navegador que estás usando no es compatible con el contenido que se va a mostrar. 
+            Por favor, usa Google (<a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>) 
+            o Firefox (<a href="http://firefox.com.cn/download/">Firefox</a>)~
+        </div>
+
+        <div id="wrap">
+            <div id="text">
+                <div id="code">
+                    <span class="say">Para el amor de mi vida:</span><br><br>
+                    <span class="say">Hoy quiero expresarte un sentimiento que hay en mi corazón</span><br>
+                    <span class="say">Yo todos los días de la vida te amo con todo mi corazón y alegre se siente mi alma al estar a tu lado,</span><br>
+                    <span class="say">Se acerca una fecha bonita para compartir, tu eres la persona que más amo en este mundo y con la que soy muy feliz❤️.</span><br>
+                    <span  class="say">En ese sentimiento tan grande que hay en mi corazón me gustaría preguntarte</span><br>
+                    <span class="say"><span class="space"></span>Quieres ser mi San Valentín?💝</span><br>
+                
+                </div>
+            </div>
+            <div id="clock-box">
+                
+                <a href="https://alexxdev.vercel.app/" target="_blank">Mi amor</a>
+                <a href="https://alexxdev.vercel.app/" target="_blank">por ti</a> comenzó hace...
+                <div id="clock"></div>
+                <div>11/09/2024</div>
+            </div>
+
+            <canvas id="canvas" width="1100" height="680"></canvas>
+        </div>
+    </div>
+
+    <audio id="media" loop>
+        <source src="Love_files/love.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var audio = document.getElementById('media');
+            // Intentar reproducir el audio automáticamente
+            var playPromise = audio.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(function(error) {
+                    console.log('Autoplay fue prevenido:', error);
+                    // Permitir que el usuario haga clic en la página para reproducir
+                    document.addEventListener('click', function() {
+                        audio.play();
+                    }, { once: true });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
